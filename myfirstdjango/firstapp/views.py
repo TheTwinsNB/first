@@ -5,5 +5,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-
-    return HttpResponse('ok')
+    context = {
+        'name': 'click'
+    }
+    # return HttpResponse('ok')
+    return render(request, 'firstapp/index.html',context=context)
